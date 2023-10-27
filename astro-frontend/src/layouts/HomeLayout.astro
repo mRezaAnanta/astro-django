@@ -1,0 +1,14 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Layout from './Layout.astro';
+
+const { title, login } = Astro.props;
+---
+
+<Layout title={title}>
+  <Header login={login} />
+  <main class="p-6">
+    <slot />
+  </main>  <Footer />
+</Layout>

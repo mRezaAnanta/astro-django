@@ -1,0 +1,15 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+/* Check current session */
+const title = "Login";
+---
+
+<HomeLayout title={title} >
+  <h1>Sign in</h1>
+  <form id="signin" class="join join-vertical" action="/api/auth/signin" method="POST">
+    <input type="email" name="email" id="email" placeholder="Email" class="input input-bordered w-full max-w-xs my-3" />
+    <input type="password" name="password" id="password" placeholder="Password" class="input input-bordered w-full max-w-xs my-3" />
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+</HomeLayout>
